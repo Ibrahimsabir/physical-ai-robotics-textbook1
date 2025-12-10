@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Physical AI & Humanoid Robotics',
+  tagline: 'Building Intelligent Systems in the Physical World - A Comprehensive Guide to Embodied Intelligence, Simulation, and Autonomous Humanoid Systems',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://physical-ai-humanoid-robotics-book.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'physical-ai-humanoid-robotics-book', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-robotics-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -44,7 +44,10 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/physical-ai-humanoid-robotics-book/physical-ai-humanoid-robotics-book/tree/main/e-book/',
+          // Enable math support
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +58,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/physical-ai-humanoid-robotics-book/physical-ai-humanoid-robotics-book/tree/main/e-book/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -68,6 +71,15 @@ const config: Config = {
     ],
   ],
 
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
+      type: 'text/css',
+      integrity: 'sha384-0Y6Y6Js3fGc05+8hbIc+cuY7U1JxBvOGih0n5hYfL1/QNpQq65T+XkV6SdOqz3f',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -75,9 +87,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Physical AI & Humanoid Robotics Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -85,11 +97,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Book',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/physical-ai-humanoid-robotics-book/physical-ai-humanoid-robotics-book',
           label: 'GitHub',
           position: 'right',
         },
@@ -99,28 +111,28 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Book Content',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduction',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Resources',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'ROS 2 Documentation',
+              href: 'https://docs.ros.org/en/rolling/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Gazebo Simulation',
+              href: 'https://gazebosim.org/',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'NVIDIA Isaac',
+              href: 'https://developer.nvidia.com/isaac',
             },
           ],
         },
@@ -133,12 +145,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/physical-ai-humanoid-robotics-book/physical-ai-humanoid-robotics-book',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

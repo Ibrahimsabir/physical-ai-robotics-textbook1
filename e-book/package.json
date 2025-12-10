@@ -1,7 +1,21 @@
 {
-  "name": "e-book",
-  "version": "0.0.0",
+  "name": "physical-ai-humanoid-robotics-book",
+  "version": "1.0.0",
   "private": true,
+  "description": "Physical AI & Humanoid Robotics: Building Intelligent Systems in the Physical World - A Comprehensive Guide to Embodied Intelligence, Simulation, and Autonomous Humanoid Systems",
+  "keywords": [
+    "robotics",
+    "ai",
+    "physical-ai",
+    "humanoid-robotics",
+    "ros2",
+    "gazebo",
+    "unity",
+    "nvidia-isaac",
+    "embodied-intelligence",
+    "simulation",
+    "docusaurus"
+  ],
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -19,9 +33,12 @@
     "@docusaurus/preset-classic": "3.9.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "katex": "^0.16.9",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^4.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",

@@ -1,0 +1,50 @@
+# Search API Contract
+
+## Purpose
+Provides search functionality across the Physical AI & Humanoid Robotics book content.
+
+## Endpoints
+
+### GET /api/search
+**Description**: Search across all book content
+
+**Parameters**:
+- query (string, required): Search query text
+- limit (number, optional): Maximum number of results (default: 10, max: 50)
+- module (string, optional): Filter by specific module
+
+**Response**:
+```
+{
+  "results": [
+    {
+      "id": "string",
+      "title": "string",
+      "contentPreview": "string",
+      "url": "string",
+      "module": "string",
+      "relevance": "number"
+    }
+  ],
+  "total": "number"
+}
+```
+
+### GET /api/content/{module}/{chapter}
+**Description**: Retrieve specific chapter content
+
+**Parameters**:
+- module (string, required): Module identifier
+- chapter (string, required): Chapter identifier
+
+**Response**:
+```
+{
+  "id": "string",
+  "title": "string",
+  "content": "string",
+  "module": "string",
+  "prerequisites": ["string"],
+  "learningObjectives": ["string"]
+}
+```

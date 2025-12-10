@@ -1,19 +1,7 @@
-# Physical AI & Humanoid Robotics Book
-
-Welcome to the Physical AI & Humanoid Robotics book project! This is a comprehensive guide to embodied intelligence, connecting digital brains to physical bodies, and developing autonomous humanoid robots using modern tools and frameworks.
-
-## About the Book
-
-This book provides a comprehensive guide to Physical AI and Humanoid Robotics, focusing on embodied intelligence, connecting digital brains to physical bodies, and developing autonomous humanoid robots using modern tools and frameworks. The book covers:
-
-- **Module 1**: The Robotic Nervous System (ROS 2)
-- **Module 2**: The Digital Twin (Gazebo & Unity)
-- **Module 3**: The AI-Robot Brain (NVIDIA Isaac)
-- **Module 4**: Vision-Language-Action (VLA)
+# Quick Start: Physical AI & Humanoid Robotics Book
 
 ## Prerequisites
-
-- Node.js (version 20 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn package manager
 - Git for version control
 - Basic command line knowledge
@@ -48,6 +36,22 @@ This book provides a comprehensive guide to Physical AI and Humanoid Robotics, f
 
 5. **Open your browser** to http://localhost:3000 to view the book
 
+## Adding New Content
+
+1. **Create a new markdown file** in the appropriate module directory under `/docs/`
+2. **Follow the naming convention**: Use descriptive, URL-friendly names with hyphens
+3. **Add frontmatter** at the top of your markdown file:
+   ```markdown
+   ---
+   title: Your Chapter Title
+   sidebar_label: Short Label
+   description: Brief description of the chapter
+   keywords: [list, of, relevant, keywords]
+   ---
+   ```
+
+4. **Update the sidebar** in `sidebars.js` to include your new content
+
 ## Building for Production
 
 ```bash
@@ -81,29 +85,9 @@ yarn test
 - `/static/` - Static assets like images and code examples
 - `/blog/` - Optional blog posts related to the content
 
-## Adding New Content
-
-1. **Create a new markdown file** in the appropriate module directory under `/docs/`
-2. **Follow the naming convention**: Use descriptive, URL-friendly names with hyphens
-3. **Add frontmatter** at the top of your markdown file:
-   ```markdown
-   ---
-   title: Your Chapter Title
-   sidebar_label: Short Label
-   description: Brief description of the chapter
-   keywords: [list, of, relevant, keywords]
-   ---
-   ```
-
-4. **Update the sidebar** in `sidebars.ts` to include your new content
-
 ## Common Tasks
 
 - **Add a new chapter**: Create a new `.md` file in the appropriate module directory
-- **Add a new module**: Create a new directory in `/docs/` and update `sidebars.ts`
+- **Add a new module**: Create a new directory in `/docs/` and update `sidebars.js`
 - **Add custom components**: Create new React components in `/src/components/`
 - **Add images**: Place images in `/static/img/` and reference with absolute paths
-
-## License
-
-This project is licensed under the MIT License.

@@ -6,25 +6,135 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #2563eb; /* Blue color for tech/robotics theme */
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 90%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Additional colors for educational content */
+  --edu-info-bg: #dbeafe;
+  --edu-info-border: #3b82f6;
+  --edu-warning-bg: #fef3c7;
+  --edu-warning-border: #f59e0b;
+  --edu-success-bg: #d1fae5;
+  --edu-success-border: #10b981;
+  --edu-danger-bg: #fee2e2;
+  --edu-danger-border: #ef4444;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode educational content colors */
+  --edu-info-bg: #1e3a8a;
+  --edu-info-border: #3b82f6;
+  --edu-warning-bg: #7c2d12;
+  --edu-warning-border: #f59e0b;
+  --edu-success-bg: #065f46;
+  --edu-success-border: #10b981;
+  --edu-danger-bg: #7f1d1d;
+  --edu-danger-border: #ef4444;
+}
+
+/* Educational content styling */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition-info {
+  border-left-color: var(--edu-info-border);
+  background-color: var(--edu-info-bg);
+}
+
+.admonition-warning {
+  border-left-color: var(--edu-warning-border);
+  background-color: var(--edu-warning-bg);
+}
+
+.admonition-success {
+  border-left-color: var(--edu-success-border);
+  background-color: var(--edu-success-bg);
+}
+
+.admonition-danger {
+  border-left-color: var(--edu-danger-border);
+  background-color: var(--edu-danger-bg);
+}
+
+/* Code block enhancements for robotics/programming content */
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}
+
+.code-block-success-line {
+  background-color: #00ff0020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #00ff0080;
+}
+
+/* Enhanced typography for educational content */
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  font-weight: 600;
+}
+
+.markdown p {
+  line-height: 1.7;
+}
+
+/* Special styling for key terms */
+.key-term {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  background-color: rgba(37, 99, 235, 0.1);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* Math formula styling */
+.math-formula {
+  display: block;
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .math-formula {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Diagram and illustration styling */
+.diagram-container {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.diagram-container img {
+  max-width: 100%;
+  height: auto;
 }

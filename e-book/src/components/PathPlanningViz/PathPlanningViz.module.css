@@ -1,0 +1,128 @@
+.container {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.algorithmSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-500);
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.canvasContainer {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.canvas {
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.infoPanel {
+  background-color: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed var(--ifm-color-emphasis-200);
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.explanation {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.explanation h4 {
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary);
+}
+
+.explanation ul {
+  margin-bottom: 1rem;
+}
+
+.explanation li {
+  margin-bottom: 0.5rem;
+}
+
+.explanation p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+
+  .algorithmSelector {
+    justify-content: center;
+  }
+
+  .canvasContainer {
+    padding: 0.5rem;
+  }
+}
