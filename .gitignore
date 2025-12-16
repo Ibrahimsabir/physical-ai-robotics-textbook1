@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# Build outputs
+build/
+dist/
+*.egg
+*.egg-info/
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env*
+!.env.example
+
+# Secrets
+rag-backend/.env
+*.key
+*.pem
+*.crt
+*.cert
+*.secret
+
+# Python
+.pytest_cache/
+.coverage
+htmlcov/
+.pyre/
+.mypy_cache/
+
+# Docusaurus
+.ebook/.docusaurus
+.ebook/build
+
+# Local configuration
+local/
+*.local
