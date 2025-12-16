@@ -62,3 +62,5 @@ htmlcov/
 # Local configuration
 local/
 *.local
+.vercel
+.env*.local

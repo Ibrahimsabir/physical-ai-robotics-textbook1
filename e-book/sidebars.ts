@@ -22,12 +22,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Introduction',
       items: ['intro'],
-      link: {
-        type: 'generated-index',
-        title: 'Introduction to Physical AI & Humanoid Robotics',
-        description: 'Getting started with embodied intelligence and physical AI systems',
-        slug: '/intro',
-      },
     },
     {
       type: 'category',
